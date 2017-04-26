@@ -1,0 +1,105 @@
+package uni.data;
+
+import java.util.Scanner;
+
+public class University {
+	static int count;
+	private static Professor professor;
+	Exam exam;
+	static Course course;
+	
+	boolean studentVerificationProcess(Student student){
+		
+	return false;//clear
+	}
+	
+	public void writeExamGetResult(Exam exam){
+		System.out.println(s.getName()+" is registerd for "+c.getName());
+		
+		
+		
+		
+		
+		System.out.println(p.getName()+" is evaluating "+c.getName()+s.getName()+" exam paper");
+		
+		e.setMarks(90);
+		
+	}
+	
+	public void studentAdmission(Student student,Course course){
+		
+	}
+	
+	public void studentCertification(Student student,Course course){
+		
+		
+	}
+	
+	public static void main(String[] args) {
+		
+		
+		
+		
+		
+		System.out.println("Enter Student name: ");
+		String sName =sc.next();
+		s.setName(sName);
+		
+		System.out.println("Enter Student age: ");
+		s.setAge(sc.nextInt());
+		
+		System.out.println("Enter Student marks: ");
+		s.setPreviousMarks(sc.nextInt());
+		
+		System.out.println("Enter Course id: ");
+		int cId=sc.nextInt();
+		
+		System.out.println("Enter Course name:");
+		String cName=sc.next();
+		
+		System.out.println("Enter Course duration: ");
+		int cDuration=sc.nextInt();
+	
+		Course c= new Course(cId,cName ,cDuration);
+		
+		System.out.println("Enter Professor name:");
+		p.setName(sc.next());
+		
+		System.out.println("Student"+ sName +"applied for university....");
+		
+		
+		
+		p.setStudent(s);
+		
+		Exam e= new Exam();
+		
+		University u=new University();
+		if(Registrar.registerStudent(s))
+		{
+			System.out.println(s.getName()+"has been registerd successfully , welcome to our university ");
+			System.out.println("your student id is:"+count++);
+		}
+		else
+		{
+			System.out.println("not registerd");
+		}
+		
+		System.out.println();
+		
+		
+		
+		System.out.println("Marks----->"+e.getMarks());
+		
+		u.studentCertification(s,c);
+		
+		if(e.getMarks()>80)
+		{
+			System.out.println(s.getName()+"your % is 80 above");
+			System.out.println(s.getName()+"you are java professional certified");
+		}
+		
+		
+		
+	}
+
+}
